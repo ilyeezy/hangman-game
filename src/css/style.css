@@ -46,7 +46,7 @@ body {
     @apply text-2xl sm:text-4xl md:text-5xl font-bold;
   }
   .button-primary {
-    @apply bg-slate-200 text-sm sm:text-base rounded-md font-medium  enabled:hover:bg-slate-300  p-3 enabled:dark:bg-indigo-600 enabled:dark:hover:bg-indigo-700 disabled:opacity-50 disabled:cursor-not-allowed;
+    @apply bg-slate-200 xs:text-xs sm:text-lg  rounded-md font-medium  enabled:hover:bg-slate-300  p-3 enabled:dark:bg-indigo-600 enabled:dark:hover:bg-indigo-700 disabled:opacity-50 disabled:cursor-not-allowed;
   }
   .button-secondary {
     @apply border border-black hover:bg-slate-100 dark:border-white dark:hover:bg-zinc-600 rounded-md w-52;
@@ -58,10 +58,10 @@ body {
     @apply flex flex-row flex-wrap justify-center;
   }
   .keyboard {
-    @apply grid  grid-rows-3 grid-cols-11;
+    @apply flex flex-wrap justify-center max-w-[800px];
   }
   .keyboard-button {
-    @apply md:w-14 md:h-14 sm:w-10 m-1 sm:m-2 xss:w-8 w-6 h-10 text-xs dark:bg-indigo-600 flex justify-center items-center disabled:opacity-30 disabled:cursor-not-allowed;
+    @apply md:w-14 md:h-14 sm:w-12 sm:h-12 m-1 sm:m-2 xss:w-8 w-6 h-8   dark:bg-indigo-600 flex justify-center items-center disabled:opacity-30 disabled:cursor-not-allowed;
   }
   .letter-guessed {
     @apply disabled:bg-green-500  dark:disabled:bg-green-500;

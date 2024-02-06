@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  @font-face {
+    font-family: Akzidenz;
+    font-weight: 700;
+    font-style: normal;
+    src: url("/fonts/akzidenz/AkzidenzGroteskPro-BoldEx.otf") format("opentype");
+  }
+  @font-face {
+    font-family: Akzidenz;
+    font-weight: 500;
+    font-style: normal;
+    src: url("/fonts/akzidenz/AkzidenzGroteskPro-Md.otf") format("opentype");
+  }
+  @font-face {
+    font-family: Akzidenz;
+    font-weight: 400;
+    font-style: normal;
+    src: url("/fonts/akzidenz/AkzidenzGroteskPro-Regular.otf")
+      format("opentype");
+  }
+  html {
+    font-family: Akzidenz, sistem-ui, sans-serif;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(204, 204, 204);
+}
+
+@layer components {
+  #main {
+    @apply min-h-screen p-2 flex flex-col justify-center items-center;
+  }
+  #app {
+    @apply dark:text-white dark:bg-zinc-800;
+  }
+  .logo {
+    @apply text-2xl sm:text-4xl md:text-5xl font-bold;
+  }
+  .button-primary {
+    @apply bg-slate-200 text-sm sm:text-base rounded-md font-medium  enabled:hover:bg-slate-300  p-3 enabled:dark:bg-indigo-600 enabled:dark:hover:bg-indigo-700 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .button-secondary {
+    @apply border border-black hover:bg-slate-100 dark:border-white dark:hover:bg-zinc-600 rounded-md w-52;
+  }
+  .letter {
+    @apply mx-2 sm:text-3xl xss:text-xl font-medium;
+  }
+  .placeholder-body {
+    @apply flex flex-row flex-wrap justify-center;
+  }
+  .keyboard {
+    @apply grid  grid-rows-3 grid-cols-11;
+  }
+  .keyboard-button {
+    @apply md:w-14 md:h-14 sm:w-10 m-1 sm:m-2 xss:w-8 w-6 h-10 text-xs dark:bg-indigo-600 flex justify-center items-center disabled:opacity-30 disabled:cursor-not-allowed;
+  }
+  .letter-guessed {
+    @apply disabled:bg-green-500  dark:disabled:bg-green-500;
+  }
+  .hangman-img {
+    @apply w-32 h-32 sm:w-60 sm:h-60;
+  }
+  .logo-sm {
+    @apply text-xl;
+  }
+  .result-header {
+    @apply text-2xl font-bold;
+  }
+  .result-header.win {
+    @apply text-lime-600;
+  }
+  .result-header.lose {
+    @apply text-red-600;
+  }
+  .result-word {
+    @apply font-medium uppercase;
+  }
+  .themesBoard {
+    @apply flex flex-wrap justify-center items-center gap-5;
+  }
+  .us-flag {
+    @apply h-3.5 w-3.5 rounded-full me-2;
+  }
+  .ru-flag {
+    @apply h-3.5 w-3.5 rounded-full me-2;
+  }
+}

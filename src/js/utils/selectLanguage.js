@@ -43,10 +43,9 @@ function changeURL() {
 export function translate() {
   let hash = window.location.hash.substring(1);
   for (let key in langArr) {
-    let htmlElem = document.querySelector(".lang-" + key);
-
+    let htmlElem = document.querySelector(`.lang-${key}`);
     if (htmlElem) {
-      replaceText(htmlElem.textContent, langArr[key][hash], htmlElem);
+      replaceText(htmlElem.innerHTML, langArr[key][hash], htmlElem);
     }
   }
 }
@@ -68,7 +67,7 @@ function checkLocation() {
   translate();
 }
 
-function replaceText(oldText, newText, node) {
+export function replaceText(oldText, newText, node) {
   node = node || document.body;
 
   let childs = node.childNodes,
@@ -76,7 +75,7 @@ function replaceText(oldText, newText, node) {
 
   while ((node = childs[i])) {
     if (node.nodeType == 3) {
-      if (node.textContent) {
+      if (node.textContent && node) {
         node.textContent = node.textContent.replace(oldText, newText);
       } else {
         node.nodeValue = node.nodeValue.replace(oldText, newText);

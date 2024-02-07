@@ -35,23 +35,25 @@ export const langArr = {
     us: "Start Game",
     ru: "Начать игру",
   },
-  losee: {
-    us: "You lost =(",
-    ru: "Ты проиграл =(",
-  },
   win: {
     us: "You won!",
     ru: "Ты выиграл!",
   },
+  lose: {
+    us: "You lost =(",
+    ru: "Ты проиграл =(",
+  },
+
   wordWas: {
     ru: "Загаданное слово: ",
+    us: "The word was: ",
   },
   playAgain: {
     us: "Play again",
     ru: "Играть снова",
   },
   tries: {
-    us: `Tries left: `,
+    us: `Tries left gavno: `,
     ru: `Осталось попыток: `,
   },
 };

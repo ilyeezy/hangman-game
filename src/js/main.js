@@ -10,6 +10,3 @@ const singleGameButton = document.getElementById("singleGame");
 const twoPlayersButton = document.getElementById("twoPlayers");
 singleGameButton.onclick = singleGame;
 twoPlayersButton.onclick = twoPlayers;
-
-// const word = sessionStorage.getItem("word");
-// console.log(/[\s-]/.test("word"));

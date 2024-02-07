@@ -100,12 +100,12 @@ const stopGame = (status) => {
   } else if (status === "lose") {
     document.getElementById(
       "game",
-    ).innerHTML += `<h2 class="result-header lose mt-5 lang-losee">You lost  :( </h2>`;
+    ).innerHTML += `<h2 class="lang-lose result-header lose mt-5">You lost  :( </h2>`;
   }
 
   document.getElementById(
     "game",
-  ).innerHTML += `<p class="lang-wordWas">The word was:   <span class="result-word">${word}</span> </p> 
+  ).innerHTML += `<p class="mt-5" ><span class="lang-wordWas">The word was:</span>   <span class="result-word">${word}</span> </p> 
 
    <button class="lang-playAgain button-primary px-5 py-2 mt-5" id="play-again">Play again</button>
   <button id="quit" class="lang-quit button-secondary px-2 py-2 mt-4">Quit </button>
@@ -254,13 +254,12 @@ export const startGame = (e, word) => {
     const leeterbyIndex = document.getElementById(`letter-${i}`);
 
     if (/[\s-]/.test(lettersWordToGuess[i])) {
-      console.log("123");
       leeterbyIndex.innerText = lettersWordToGuess[i];
       winCount++;
     }
   }
 
-  gameDiv.innerHTML += `<p id="tries" class="mt-5 lang-tries">Tries left: <span class="font-medium text-red-700" id="tries-left">${10}</span></p>`;
+  gameDiv.innerHTML += `<p id="tries" class="mt-5"><span class="lang-tries">Tries left:</span> <span class="font-medium text-red-700" id="tries-left">${10}</span></p>`;
   gameDiv.appendChild(keyboardDiv);
 
   keyboardDiv.addEventListener("click", (e) => {

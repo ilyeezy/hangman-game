@@ -190,14 +190,14 @@ export const twoPlayers = () => {
   const inputWordToGuess = document.getElementById("inputWordToGuess");
   let wordToGuess = "";
   const startGameButton = document.getElementById("startGame");
-  const regexUS = /^[a-zA-Z]*$/;
-  const regexRU = /^[а-яА-Я]*$/;
+  const regexUS = /^[a-zA-Z\s\-]*$/;
+  const regexRU = /^[а-яА-Я\s\-]*$/;
 
   inputWordToGuess.addEventListener("input", (e) => {
     if (hash === "us" && !regexUS.test(e.target.value)) {
-      e.target.value = e.target.value.replace(/[^a-zA-Z]/g, "");
+      e.target.value = e.target.value.replace(/[^a-zA-Z\s\-]/g, "");
     } else if (hash === "ru" && !regexRU.test(e.target.value)) {
-      e.target.value = e.target.value.replace(/[^а-яА-Я]/g, "");
+      e.target.value = e.target.value.replace(/[^а-яА-Я\s\-]/g, "");
     } else {
       wordToGuess = e.target.value;
     }

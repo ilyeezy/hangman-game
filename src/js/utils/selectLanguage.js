@@ -11,13 +11,13 @@ const locationLang = lang
 export const selectedLanguage = () => {
   if (lang === "English (US)" || !lang) {
     const usFlag = document.createElement("img");
-    usFlag.src = "/images/us-flag.svg";
+    usFlag.src = "images/us-flag.svg";
     usFlag.classList.add("us-flag");
     buttonDropdown.innerText = "English (US)";
     buttonDropdown.prepend(usFlag);
   } else if (lang === "Russian (RU)") {
     const ruFlag = document.createElement("img");
-    ruFlag.src = "/images/ru-flag.svg";
+    ruFlag.src = "images/ru-flag.svg";
     buttonDropdown.innerText = "Russian (RU)";
     ruFlag.classList.add("ru-flag");
     buttonDropdown.prepend(ruFlag);
